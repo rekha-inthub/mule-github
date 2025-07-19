@@ -1,8 +1,8 @@
 name: Build and Deploy [TEST]
 
 on:
-  push:
-    branches: [ test ]
+  #push:
+    #branches: [ test ]
   pull_request:
     branches: [ test ]
     types: [ closed ]
