@@ -20,7 +20,7 @@
 		<app.runtime>4.9.7</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 		<env>dev</env>
-		<munit.version>3.3.2</munit.version>
+		<munit.version>3.4.0</munit.version>
 	</properties>
 
 	<build>
@@ -28,7 +28,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.4.0</version>
 			</plugin>
 			<plugin>
 				<groupId>com.mulesoft.munit.tools</groupId>
