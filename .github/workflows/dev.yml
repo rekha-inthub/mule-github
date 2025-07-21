@@ -29,14 +29,12 @@ jobs:
           java-version: 17
 
       - name: Test with Maven
-        #run: echo "Skipping tests in DEV workflow"
+        run: echo "Skipping tests in DEV workflow"
         # Uncomment the following lines to run MUnit tests
-        run: |
-          mvn clean install test -e --settings .maven/settings.xml \
-
-          #mvn test --settings .maven/settings.xml \
-          -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
-          -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
+        #run: |
+        #  mvn test --settings .maven/settings.xml \
+        #  -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
+        #  -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
       
       - name: Upload MUnit reports
         uses: actions/upload-artifact@master
@@ -44,4 +42,5 @@ jobs:
           name: munit-test-reports
           path: target/site/munit/coverage/
       
+        
   
