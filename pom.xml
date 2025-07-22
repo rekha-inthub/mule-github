@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>45bbfc6e-f023-4987-9de8-422cae4c4c09</groupId>
-	<artifactId>mule-github-actions</artifactId>
+	<artifactId>mule-github</artifactId>
 	<version>1.0.8</version>
 	<packaging>mule-application</packaging>
 
-	<name>mule-github-actions</name>
+	<name>mule-github</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

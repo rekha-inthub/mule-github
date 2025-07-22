@@ -30,14 +30,15 @@ jobs:
       
       #- name: Test with Maven
       #  run: |
-      #    mvn test \
+      #    
+             #mvn test --settings .maven/settings.xml \
       #      -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
       #      -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"    
       - name: Test with Maven
       #  run: echo "Skipping tests in DEV workflow"
       #  # Uncomment the following lines to run MUnit tests
         run: |
-          #mvn test --settings .maven/settings.xml \
+          mvn test \
           -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
           -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
       
