@@ -89,6 +89,12 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+		    <groupId>org.mule.runtime</groupId>
+		    <artifactId>mule-api</artifactId>
+		    <version>4.9.7</version>
+		    <scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.6</version>
