@@ -38,8 +38,8 @@ jobs:
       #  # Uncomment the following lines to run MUnit tests
         run: |
           mvn test --settings .maven/settings.xml \
-            -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
-            -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
+          -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
+          -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
       
       #- name: Run MUnit tests
       #  run: mvn clean test
