@@ -27,22 +27,19 @@ jobs:
         with:
           distribution: "zulu"
           java-version: 17
+
+
       
-      #- name: Test with Maven
-      #  run: |
-      #    mvn test \
-      #      -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
-      #      -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"    
+       
       - name: Test with Maven
-      #  run: echo "Skipping tests in DEV workflow"
+        run: mvn test
       #  # Uncomment the following lines to run MUnit tests
-        run: |
-          mvn test --settings .maven/settings.xml \
-          -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
-          -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
+      #  run: |
+      #    mvn test --settings .maven/settings.xml \
+      #    -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
+      #    -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
       
-      #- name: Run MUnit tests
-      #  run: mvn clean test
+      
             
 
       
