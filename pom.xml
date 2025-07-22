@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>a3c60d43-de98-4570-ae59-acdd4ae8effc</groupId>
+	<groupId>45bbfc6e-f023-4987-9de8-422cae4c4c09</groupId>
 	<artifactId>mule-github-actions</artifactId>
-	<version>1.0.10</version>
+	<version>1.0.8</version>
 	<packaging>mule-application</packaging>
 
 	<name>mule-github-actions</name>
@@ -20,7 +20,7 @@
 		<app.runtime>4.9.7</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 		<env>dev</env>
-		<munit.version>2.4.0</munit.version>
+		<munit.version>3.3.2</munit.version>
 	</properties>
 
 	<build>
@@ -28,9 +28,8 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.4.0</version>
+				<version>3.0.0</version>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -51,8 +50,8 @@
 						<vCores>0.1</vCores>
 						<javaVersion>17</javaVersion>
 						<deploymentSettings>
-							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-						</deploymentSettings>
+                            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+                        </deploymentSettings>
 						<deploymentTimeout>600000</deploymentTimeout>
 						<skipDeploymentVerification>true</skipDeploymentVerification>
 					</cloudhub2Deployment>
@@ -85,12 +84,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.mule.runtime</groupId>
-		    <artifactId>mule-api</artifactId>
-		    <version>4.9.7</version>
-		    <scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.6</version>
@@ -99,14 +92,14 @@
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-runner</artifactId>
-			<version>2.4.0</version>
+			<version>3.4.0</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-tools</artifactId>
-			<version>2.4.0</version>
+			<version>3.4.0</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
@@ -131,14 +124,12 @@
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
-		
-	    <repository>
-	      <id>mulesoft-releases</id>
-	      <name>MuleSoft Releases Repository</name>
-	      <url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
-	    </repository>
- 
-		
+		<repository>
+			<id>mulesoft-releases</id>
+			<name>MuleSoft Releases Repository</name>
+			<url>https://repository.mulesoft.org/releases/</url>
+			<layout>default</layout>
+		</repository>
 		<repository>
 			<id>${serverId}</id>
 			<name>Private Exchange repository</name>
@@ -161,10 +152,10 @@
 
 	<distributionManagement>
 		<repository>
-			<id>${serverId}</id>
-			<name>Corporate Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
-			<layout>default</layout>
+		<id>${serverId}</id>
+		<name>Corporate Repository</name>
+		<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+		<layout>default</layout>
 		</repository>
 	</distributionManagement>
 
