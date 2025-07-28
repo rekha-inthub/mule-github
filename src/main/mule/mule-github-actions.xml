@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	"message": "Hello Team Good afternoon"
+	"message": "Hello Team Good afternoon to all"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
