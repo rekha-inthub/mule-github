@@ -11,13 +11,14 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="mule-github-actionsFlow" doc:id="5913aeff-b662-42b6-8296-346c347103ea" >
 		<http:listener doc:name="Listener" doc:id="1eecd699-983f-4abf-a619-62bf0d7481dc" config-ref="HTTP_Listener_config" path="/test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="dc347cc2-45d2-40d3-ab63-000ddb379303" message='#["Before transform"]'/>
 		<ee:transform doc:name="Transform Message" doc:id="9d5a392e-4bd3-41d1-929e-bfa0ed3c99d3" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
 ---
 {
-	"message": "Hello Team Good"
+	"message": "Hello Team Good Morning"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
